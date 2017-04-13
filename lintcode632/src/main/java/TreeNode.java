@@ -64,4 +64,14 @@ public class TreeNode {
     public void setCurrtObj(Integer currtObj) {
         this.currtObj = currtObj;
     }
+
+    @Override
+    public String toString() {
+        return "TreeNode{" +
+                "parentTreeNode=" + parentTreeNode +
+                ", leftChild=" + leftChild +
+                ", rightChild=" + rightChild +
+                ", currtObj=" + currtObj +
+                '}';
+    }
 }

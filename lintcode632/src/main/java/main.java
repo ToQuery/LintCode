@@ -4,20 +4,25 @@
  * @date 17-4-10.
  */
 public class main {
+
+    public static TreeNode maxTree = new TreeNode(0);
+
     public static void main(String[] s) {
         TreeNode treeNode = initTreeNode();
-        Integer integer = getMaxNum(treeNode, treeNode.getCurrtObj());
-        System.out.println(integer);
+        getMaxNum(treeNode);
+        System.out.println(maxTree);
     }
 
-    private static Integer getMaxNum(TreeNode treeNode, int maxNum) {
-        if (treeNode == null) {
-            return maxNum;
+    private static void getMaxNum(TreeNode treeNode) {
+        if (treeNode == null){
+            return;
         }
-        if (maxNum < treeNode.getCurrtObj()) {
-            maxNum = treeNode.getCurrtObj();
+
+        if (maxTree.getCurrtObj() < treeNode.getCurrtObj()) {
+            maxTree = treeNode;
         }
-        return getMaxNum(treeNode.getLeftChild(), maxNum);
+        getMaxNum(treeNode.getLeftChild());
+        getMaxNum(treeNode.getRightChild());
 
     }
 
