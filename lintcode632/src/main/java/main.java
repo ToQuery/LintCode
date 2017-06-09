@@ -5,7 +5,7 @@
  */
 public class main {
 
-    public static TreeNode maxTree = new TreeNode(0);
+    public static TreeNode maxTree = new TreeNode(Integer.MIN_VALUE);
 
     public static void main(String[] s) {
         TreeNode treeNode = initTreeNode();
